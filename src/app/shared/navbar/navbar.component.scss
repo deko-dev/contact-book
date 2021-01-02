@@ -1,0 +1,30 @@
+nav {
+    // border-bottom: 2px solid #333333;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    padding: 10px;
+    box-shadow: 0px 1px 10px 1px hsla(51, 40%, 59%, 0.445);
+    span {
+        display: block;
+        border: 1px solid #eedd7b;
+        padding: 5px;
+        margin-right: 10px;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        i {
+            font-size: 25px;
+            color: #c0b36b;
+        }
+    }
+    h2 {
+        font-size: 25px;
+        font-weight: 300;
+        font-style: italic;
+        color: #c0b36b;
+    }
+}

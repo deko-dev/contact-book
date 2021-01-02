@@ -1,0 +1,21 @@
+.content-home {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    .btn-agg-contact {
+        border: none;
+        text-decoration: none;
+        background-color: #c0b36b;
+        padding: 18px;
+        width: 180px;
+        border-radius: 5px;
+        color: #4F4265;
+        font-size: 18px;
+        box-shadow: 0px 1px 10px 1px hsla(51, 40%, 59%, 0.445);
+        outline: none;
+        text-align: center;
+    }
+}
