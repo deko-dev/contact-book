@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Contacto } from '../../../interfaces/contacto.interface';
 
 @Component({
   selector: 'app-total-contacts',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TotalContactsComponent implements OnInit {
 
-  constructor() { }
+  totalContacts: Number = 0;
+
+  constructor() { 
+    this.calcularTotalContactos();
+  }
 
   ngOnInit(): void {
+  }
+
+
+  calcularTotalContactos() {
+
+    if( !localStorage.getItem('contactos') ){
+      this.totalContacts = 0;
+      return;
+    } else {
+      let arrayContactos: Contacto[] = JSON.parse(localStorage.getItem('contactos'));
+      this.totalContacts = arrayContactos.length;
+    }
+
   }
 
 }

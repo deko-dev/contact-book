@@ -1,1 +1,33 @@
-<p>form works!</p>
+<form (ngSubmit)="activarLoading()" class="form-contact" [formGroup]="formContacto">
+    <div class="labels-form">
+        <div class="label id">
+            <label for="id">Id:</label>
+            <input type="text" formControlName="id" name="id" id="id">
+        </div>
+        <div class="label nid">
+            <label for="nid">Numero de identificación:</label>
+            <input type="text" formControlName="nid" name="nid" id="nid">
+        </div>
+        <div class="label nombre">
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" formControlName="nombre" name="nombre" id="nombre">
+        </div>
+        <div class="label celular">
+            <label for="celular">Celular:</label>
+            <input type="tel" formControlName="celular" name="celular" id="celular">
+        </div>
+        <div class="label direccion">
+            <label for="direccion">Dirección:</label>
+            <input type="text" formControlName="direccion" name="direccion" id="direccion">
+        </div>
+        <div class="label cumpleanos">
+            <label for="cumpleanos">Fecha de Cumpleaños:</label>
+            <input type="date" formControlName="cumpleanos" name="cumpleanos" id="cumpleanos">
+        </div>
+    </div>
+    <div class="options-form" [ngClass]="{'centrar-cargando': cargando}">
+        <app-cargando *ngIf="cargando"></app-cargando>
+        <button class="btn" *ngIf="!cargando">Guardar</button>
+        <a class="" routerLink="/contactos" *ngIf="!cargando">Cancelar</a>
+    </div>
+</form>

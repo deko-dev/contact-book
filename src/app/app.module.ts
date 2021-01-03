@@ -12,6 +12,7 @@ import { TotalContactsComponent } from './home/components/total-contacts/total-c
 import { TotalBirthdayComponent } from './home/components/total-birthday/total-birthday.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routes.module';
+import { CargandoComponent } from './shared/cargando/cargando.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AppRoutingModule } from './app-routes.module';
     LabelContactComponent,
     FormComponent,
     TotalContactsComponent,
-    TotalBirthdayComponent
+    TotalBirthdayComponent,
+    CargandoComponent
   ],
   imports: [
     BrowserModule,

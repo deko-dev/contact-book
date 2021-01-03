@@ -1,1 +1,14 @@
-<p>label-contact works!</p>
+<div class="label-contacto">
+    <div class="icon-contacto">
+        <i class="fas fa-user-circle"></i>
+    </div>
+    <div class="info-contacto">
+        <h2 class="nombre">{{contacto.nombre}}</h2>
+        <p class="celular">{{contacto.celular}}</p>
+        <span class="cumpleanos">{{contacto.cumpleanos}}</span>
+    </div>
+    <div class="opt-contacto">
+        <button class="edit" [routerLink]="['edit', contacto.id]"><i class="fas fa-pen" aria-hidden="true"></i></button>
+        <button class="delete" (click)="deleteContact(contacto.id)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+    </div>
+</div>

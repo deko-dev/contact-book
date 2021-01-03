@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Contacto } from '../interfaces/contacto.interface';
 
 @Component({
   selector: 'app-contacts',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactsComponent implements OnInit {
 
-  constructor() { }
+  cargando: Boolean = false;
+  arrayContactos: Contacto[] = [];
+  
+  constructor() { 
+    this.updateList("true");
+  }
 
   ngOnInit(): void {
+  }
+
+  updateList(event: string){
+    this.cargando = true;
+    setTimeout(() => {
+      this.cargando = false;
+      this.arrayContactos = JSON.parse(localStorage.getItem('contactos'));
+    }, 1500)
   }
 
 }

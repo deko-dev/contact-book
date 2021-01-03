@@ -1,1 +1,14 @@
-<p>contacts works!</p>
+<app-navbar></app-navbar>
+
+<main class="content-contactos">
+    <a class="btn-agg-contact" routerLink="new">
+        <i class="fas fa-user-plus"></i> Nuevo Contacto
+    </a>
+    <div class="list-contactos" *ngIf="!cargando">
+        <app-label-contact (actualizarLista)="updateList($event)" *ngFor="let contacto of arrayContactos" [contacto]="contacto"></app-label-contact>
+    </div>
+    <app-cargando *ngIf="cargando"></app-cargando>
+    <a class="btn-ir-home" routerLink="">
+        <i class="fas fa-home"></i> ir a Home
+    </a>
+</main>

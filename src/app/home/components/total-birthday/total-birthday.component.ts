@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Contacto } from '../../../interfaces/contacto.interface';
 
 @Component({
   selector: 'app-total-birthday',
@@ -7,9 +8,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TotalBirthdayComponent implements OnInit {
 
-  constructor() { }
+  cantBirthDay = 0;
+
+  constructor() { 
+    let arrayContactos: Contacto[] = JSON.parse(localStorage.getItem('contactos'));
+
+    let arrayContactosBirthDay: Contacto[] = [];
+
+    arrayContactosBirthDay = arrayContactos.filter(
+      (contacto: Contacto) => {
+        let cumpleanosArr = contacto.cumpleanos.split("-");
+        let date = new Date();
+        let month = (date.getMonth()+1);
+        let day = date.getDate();
+
+       if( parseInt(cumpleanosArr[1], 10) ==  month && parseInt(cumpleanosArr[2], 10) == day){
+         return contacto;
+       }
+
+      }
+     )
+
+     this.cantBirthDay = arrayContactosBirthDay.length;
+  }
 
   ngOnInit(): void {
   }
 
+
+  
+  
 }

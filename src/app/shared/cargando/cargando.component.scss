@@ -1,0 +1,34 @@
+// Cargando
+.box-padre {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px dashed #19345c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: giroPadre 1s infinite alternate;
+    .box-hijo {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: 5px dashed #19345c;
+        animation: giroHijo 1s infinite;
+        @keyframes giroHijo {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+    @keyframes giroPadre {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(-360deg);
+        }
+    }
+}
