@@ -1,8 +1,8 @@
 {
     "name": "Contact Book App By 🐼<Deko-Dev/>💜",
     "short_name": "Contact Book App",
-    "theme_color": "#4F4265",
-    "background_color": "#4F4265",
+    "theme_color": "#2C213E",
+    "background_color": "#2C213E",
     "display": "fullscreen",
     "description": "App para guardar tus contactos",
     "scope": "./",
