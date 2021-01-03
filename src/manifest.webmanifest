@@ -1,8 +1,8 @@
 {
-    "name": "contact-book",
-    "short_name": "contact-book",
+    "name": "Contact Book App",
+    "short_name": "contact-book By 🐼<Deko-Dev/>💜",
     "theme_color": "#4F4265",
-    "background_color": "#fafafa",
+    "background_color": "transparent",
     "display": "standalone",
     "scope": "./",
     "start_url": "./",
