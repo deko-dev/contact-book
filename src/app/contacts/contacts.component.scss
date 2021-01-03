@@ -13,16 +13,17 @@ main.content-contactos {
         text-decoration: none;
         background-color: #c0b36b;
         padding: 12px;
-        width: 180px;
+        width: 200px;
         border-radius: 5px;
         color: #4F4265;
-        font-size: 15px;
+        font-size: 18px;
         // box-shadow: 0px 1px 10px 1px hsla(51, 40%, 59%, 0.445);
         outline: none;
         text-align: center;
     }
     .btn-ir-home {
-        width: 120px;
+        width: 150px;
+        font-size: 18px;
     }
     .list-contactos {
         display: flex;
@@ -30,5 +31,11 @@ main.content-contactos {
         justify-content: space-around;
         align-items: flex-start;
         padding: 5px 10px;
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 100%;
+        }
     }
 }

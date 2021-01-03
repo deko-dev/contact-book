@@ -8,10 +8,19 @@
     padding: 10px;
     min-width: 318px;
     min-height: 80px;
+    @media screen and (min-width: 768px) {
+        min-width: 700px;
+        max-width: 700px;
+        padding: 20px;
+    }
     .icon-contacto {
         flex: 0 1 calc(10% - 10px);
         font-size: 35px;
         color: #4F4265;
+        @media screen and (min-width: 768px) {
+            font-size: 50px;
+            text-align: center;
+        }
     }
     .info-contacto {
         flex: 0 1 calc(60% - 10px);
@@ -25,18 +34,30 @@
         .nombre {
             font-size: 15px;
             font-weight: 700;
+            @media screen and (min-width: 768px) {
+                font-size: 24px;
+            }
         }
         .celular {
             font-size: 13px;
             font-weight: 400;
+            @media screen and (min-width: 768px) {
+                font-size: 22px;
+            }
         }
         .cumpleanos {
+            @media screen and (min-width: 768px) {
+                font-size: 21px;
+            }
             font-size: 12px;
             font-weight: 300;
         }
     }
     .opt-contacto {
         flex: 0 1 calc(30% - 10px);
+        @media screen and (min-width: 768px) {
+            flex: 0 1 calc(25% - 10px);
+        }
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -52,6 +73,11 @@
             // box-shadow: 0px 1px 10px 1px hsla(51, 40%, 59%, 0.445);
             outline: none;
             text-align: center;
+            cursor: pointer;
+            @media screen and (min-width: 768px) {
+                font-size: 16px;
+                padding: 20px;
+            }
         }
     }
 }
