@@ -3,7 +3,7 @@
     "short_name": "Contact Book App",
     "theme_color": "#2C213E",
     "background_color": "#2C213E",
-    "display": "fullscreen",
+    "display": "standalone",
     "description": "App para guardar tus contactos",
     "scope": "./",
     "start_url": "./",
