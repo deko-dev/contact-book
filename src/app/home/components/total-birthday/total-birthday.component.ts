@@ -11,10 +11,10 @@ export class TotalBirthdayComponent implements OnInit {
   cantBirthDay = 0;
 
   constructor() { 
-    let arrayContactos: Contacto[] = JSON.parse(localStorage.getItem('contactos'));
     
-    if(arrayContactos.length > 0){
+    if(localStorage.getItem('contactos')){
       
+      let arrayContactos: Contacto[] = JSON.parse(localStorage.getItem('contactos'));
       let arrayContactosBirthDay: Contacto[] = [];
 
       arrayContactosBirthDay = arrayContactos.filter(
