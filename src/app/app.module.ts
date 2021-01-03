@@ -13,6 +13,8 @@ import { TotalBirthdayComponent } from './home/components/total-birthday/total-b
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routes.module';
 import { CargandoComponent } from './shared/cargando/cargando.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { CargandoComponent } from './shared/cargando/cargando.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
