@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app-routes.module';
 import { CargandoComponent } from './shared/cargando/cargando.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { UpdatePwaService } from './services/update-pwa.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,9 @@ import { environment } from '../environments/environment';
     ReactiveFormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [],
+  providers: [
+    UpdatePwaService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
